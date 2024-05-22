@@ -1,0 +1,85 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to left,rgb(180, 222, 230),rgb(80, 188, 210),rgb(5, 111, 132));
+  display: grid;
+  place-items: center;
+}
+
+h1{
+  font-size: 60px;
+}
+
+.big{
+  height: 500px;
+  width: 500px;
+  background-color: rgb(217, 217, 97);
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 2px #000;
+  animation: changecol 10s linear infinite;
+}
+
+.small{
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background-color: rgb(231, 99, 10);
+  position: relative;
+  overflow: hidden;
+  &::before{
+    position: absolute;
+    content:"";
+    left: 0;
+    top: 0;
+    width: inherit;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: black;
+    animation: moonwalk 10s ease-in-out infinite ;
+  }
+  
+}
+
+@keyframes moonwalk{
+  0%{
+    translate: 100%;
+    scale: 1;
+  }
+  50%{
+    translate: 0%;
+    scale: 0.9;
+    box-shadow: 0px 0px 10px 9px white;
+  }
+  100%{
+    translate: -100%;
+    scale: 0.9;
+  }
+}
+
+
+@keyframes changecol{
+  0%{
+    background-color:  rgb(206, 206, 29);
+  }
+  25%{
+    background-color:  rgb(218, 214, 90);
+  }
+  50%{
+    background-color: black;
+   
+  }
+  75%{
+    background-color:  rgb(218, 214, 90);
+  }
+  100%{
+    background-color:  rgb(206, 206, 29);
+  }
+}

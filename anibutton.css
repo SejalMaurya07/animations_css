@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  background-color: black;
+}
+
+.shake{
+  height: 100px;
+  width: 300px;
+  border-radius: 10px;
+  border: 7px solid yellow;
+  background-color: transparent;
+  color: yellow;
+  font-size: 50px;
+  /* ****************************** To capatalize the first letter ***************************** */
+  text-transform: capitalize;
+}
+
+.shake:hover{
+  border: 7px solid rgb(0, 229, 249);
+  color: rgb(0, 229, 249);
+  animation: shaking 0.2s linear;
+}
+
+@keyframes shaking{
+  0%{
+    rotate: 20deg;
+  }
+  50%{
+    rotate: -20deg;
+  }
+  100%{
+    rotate: 20deg;
+  }
+}
